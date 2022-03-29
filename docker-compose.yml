@@ -7,3 +7,7 @@ services:
     volumes:
       - ./:/app
       - /app/node_modules
+    environment:
+      - COOKIE_SECRET=${COOKIE_SECRET}
+      - DATABASE_URL=${DATABASE_URL}
+      - FRONTEND_URL=${FRONTEND_URL}
