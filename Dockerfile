@@ -1,9 +1,7 @@
-FROM node:16
+FROM node:14-alpine
 WORKDIR /app
-COPY package.json .
-# RUN npm install -f
+COPY package.json package-lock.json ./
 RUN npm ci --production
 COPY . ./
-EXPOSE 3000
-# CMD [ "npm", "run", "dev" ]
-CMD ["./node_modules/.bin/keystone-next", "start"]
+EXPOSE 4500
+CMD ["npm", "start"]
