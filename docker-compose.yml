@@ -2,12 +2,6 @@ version: '3'
 services:
   todo-backend:
     build: .
+    restart: always
     ports:
       - "4500:4500"
-    volumes:
-      - ./:/app
-      - /app/node_modules
-    environment:
-      - COOKIE_SECRET=${COOKIE_SECRET}
-      - DATABASE_URL=${DATABASE_URL}
-      - FRONTEND_URL=${FRONTEND_URL}
