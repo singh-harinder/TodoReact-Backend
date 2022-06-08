@@ -1,0 +1,10 @@
+version: '3'
+services:
+  todo-backend:
+    build: .
+    environment:
+      - NODE_ENV=production      
+      - COOKIE_SECRET=${COOKIE_SECRET}
+      - DATABASE_URL=${DATABASE_URL}
+      - FRONTEND_URL=${FRONTEND_URL}
+    command: ["./node_modules/.bin/keystone-next", "start"]
