@@ -1,0 +1,11 @@
+version: '3'
+services:
+  todo-backend:
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - COOKIE_SECRET=${COOKIE_SECRET}
+      - DATABASE_URL=${DATABASE_URL}
+      - FRONTEND_URL=${FRONTEND_URL}
+    command: ["npm", "run", "dev"]
