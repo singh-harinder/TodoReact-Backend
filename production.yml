@@ -1,7 +1,6 @@
 version: '3'
 services:
   todo-backend:
-    build: .
     environment:
       - NODE_ENV=production      
       - COOKIE_SECRET=${COOKIE_SECRET}
