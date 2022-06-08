@@ -1,6 +1,7 @@
 version: '3'
 services:
   todo-backend:
+    build: .
     volumes:
       - ./:/app
       - /app/node_modules
